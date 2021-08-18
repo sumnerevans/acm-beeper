@@ -1,0 +1,153 @@
+\documentclass{acm}
+
+\usepackage{fontawesome}
+\usepackage{etoolbox}
+\usepackage{textcomp}
+\usepackage[nodisplayskipstretch]{setspace}
+\usepackage{xspace}
+\usepackage{verbatim}
+\usepackage{multicol}
+\usepackage{soul}
+\usepackage{attrib}
+
+\usepackage{amsmath,amssymb,amsthm}
+
+\usepackage[linesnumbered,commentsnumbered,ruled,vlined]{algorithm2e}
+\newcommand\mycommfont[1]{\footnotesize\ttfamily\textcolor{blue}{#1}}
+\SetCommentSty{mycommfont}
+\SetKwComment{tcc}{ \# }{}
+\SetKwComment{tcp}{ \# }{}
+
+\usepackage{siunitx}
+
+\usepackage{tikz}
+\usepackage{pgfplots}
+\usetikzlibrary{decorations.pathreplacing,calc,arrows.meta,shapes,graphs}
+
+\AtBeginEnvironment{minted}{\singlespacing\fontsize{10}{10}\selectfont}
+\setmainfont{Open Sans Light}
+\usefonttheme{serif}
+
+\makeatletter
+\patchcmd{\beamer@sectionintoc}{\vskip1.5em}{\vskip0.5em}{}{}
+\makeatother
+
+% Math stuffs
+\newcommand{\Z}{\mathbb{Z}}
+\newcommand{\R}{\mathbb{R}}
+\newcommand{\N}{\mathbb{N}}
+\newcommand{\lcm}{\text{lcm}}
+\newcommand{\Inn}{\text{Inn}}
+\newcommand{\Aut}{\text{Aut}}
+\newcommand{\Ker}{\text{Ker}\ }
+\newcommand{\la}{\langle}
+\newcommand{\ra}{\rangle}
+
+\newcommand{\yournewcommand}[2]{Something #1, and #2}
+
+\newenvironment{question}[1]{\par\textbf{Question #1.}\par}{}
+
+\newcommand{\pmidg}[1]{\parbox{\widthof{#1}}{#1}}
+\newcommand{\splitslide}[4]{
+    \noindent
+    \begin{minipage}{#1 \textwidth - #2 }
+        #3
+    \end{minipage}%
+    \hspace{ \dimexpr #2 * 2 \relax }%
+    \begin{minipage}{\textwidth - #1 \textwidth - #2 }
+        #4
+    \end{minipage}
+}
+
+\newcommand{\frameoutput}[1]{\frame{\colorbox{white}{#1}}}
+
+\newcommand{\tikzmark}[1]{%
+\tikz[baseline=-0.55ex,overlay,remember picture] \node[inner sep=0pt,] (#1)
+{\vphantom{T}};
+}
+
+\newcommand{\braced}[3]{%
+    \begin{tikzpicture}[overlay,remember picture]
+        \draw [thick,decorate,decoration={brace,raise=1ex,amplitude=4pt},blue] (#2.south west-|T1.south west) -- node[anchor=west,left,xshift=-1.8ex,text=olive]{#3} (#1.north west-|T1.south west);
+    \end{tikzpicture}
+}
+
+\title{Matrix: An open network for secure, decentralized communication}
+\author{Sumner Evans}
+\date{August 31, 2021}
+\institute{Beeper}
+
+\begin{document}
+
+\begin{frame}{A bit about me}
+    \begin{itemize}
+        \item I graduated in 2018 with my bachelor's in CS from Mines.
+        \item I graduated in 2019 with my master's in CS, also from Mines.
+        \item I worked at The Trade Desk for two years right after graduating.
+        \item I currently am teaching \textit{CSCI 400 Principles of Programming
+            Languages} and I have previously taught \textit{CSCI 406 Algorithms}
+            and \textit{CSCI 564 Advanced Computer Architecture}.
+        \item I started at Beeper in July.
+    \end{itemize}
+\end{frame}
+
+\begin{frame}{A bit about you}
+    I'd like to get to know everyone a bit more and get a feel for everyone's
+    experience levels.
+    \pause
+
+    \begin{itemize}[<+->]
+        \item How many of you have taken Algorithms?
+        \item How many of you have taken Data Structures?
+        \item How many of you have taken Intro to Computer Science?
+        \item How many of you are in the ACM Matrix chat?
+    \end{itemize}
+\end{frame}
+
+\begin{frame}{Overview}
+    \setbeamertemplate{section in toc}[sections numbered]
+    \tableofcontents[hideallsubsections]
+\end{frame}
+
+\section{Why Matrix?}
+
+\begin{frame}{Let's talk about chat platforms\ldots}
+    Which of the following chat networks do you use/have you used?
+    \begin{itemize}[<+->]
+        \item TikTok
+        \item Snapchat
+        \item Instagram
+        \item Discord
+        \item Facebook Messenger
+        \item iMessage
+        \item Hangouts
+        \item Slack
+        \item Signal
+        \item Telegram
+        \item Wire
+    \end{itemize}
+    \pause[\thebeamerpauses]
+    What do all of these chat networks have in common?
+    \pause
+
+    They are \textbf{non-interoperable, and many are closed source and/or
+    unencrypted}.
+\end{frame}
+
+\begin{frame}{Why is this a problem?}
+    The \textbf{closed source} platforms are problematic because you can never
+    be sure \textit{how your data is being used}.
+    \pause
+
+    The \textbf{unencrypted} platforms are problematic because your messages are
+    not private.
+    \pause
+
+    And, because none of them are interoperable, you have to have a ton of chat
+    apps on your phone.
+\end{frame}
+
+\end{document}
+% Local Variables:
+% TeX-command-extra-options: "-shell-escape"
+% End:
