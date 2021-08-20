@@ -113,19 +113,24 @@
 
 \begin{frame}{Let's talk about chat platforms\ldots}
     Which of the following chat networks do you use/have you used?
-    \begin{itemize}[<+->]
-        \item TikTok
-        \item Snapchat
-        \item Instagram
-        \item Discord
-        \item Facebook Messenger
-        \item iMessage
-        \item Hangouts
-        \item Slack
-        \item Signal
-        \item Telegram
-        \item Wire
-    \end{itemize}
+    \begin{multicols}{2}
+        \begin{itemize}[<+->]
+            \item SMS/MMS
+            \item iMessage
+            \item LinkedIn
+            \item Snapchat
+            \item WhatsApp
+            \item Instagram
+            \item Discord
+            \item Facebook Messenger
+            \item Hangouts
+            \item Slack
+            \item Microsoft Teams
+            \item Signal
+            \item Telegram
+            \item Wire
+        \end{itemize}
+    \end{multicols}
     \pause[\thebeamerpauses]
     What do all of these chat networks have in common?
     \pause
@@ -145,6 +150,116 @@
 
     And, because none of them are interoperable, you have to have a ton of chat
     apps on your phone.
+\end{frame}
+
+\section{What does Matrix provide?}
+
+\begin{frame}{Matrix solves all your problems}
+    Matrix is an \textbf{open} specification for \textbf{encrypted},
+    \textbf{decentralized} communication. \pause
+
+    It is also designed in such a way that it makes it easy to break down walled
+    garden communication platforms via \textbf{bridging}.
+
+    % TODO diagram of bridging
+\end{frame}
+
+\begin{frame}{A side note}
+    I first became interested in Matrix when I was the incoming Chair of ACM.
+    Robby (VC) and I tried out most of the open source chat platforms and ended
+    up landing on Matrix because it had all of these characteristics.
+\end{frame}
+
+\begin{frame}{Matrix is an \textit{open specification}}
+    Open specifications and standards are all around you. They just make
+    sense\texttrademark.
+
+    Examples:\pause
+    \begin{itemize}
+        \item Power plugs
+        \item USB
+        \item Wi-Fi
+        \item Every crypto algorithm that's any good
+    \end{itemize}
+    \pause
+
+    Open protocols allow for \textit{open development} and  \textit{clean-room
+    implementations}, they \textit{encourage competition}, and are
+    \textit{externally auditable}.
+    \pause
+\end{frame}
+
+\begin{frame}{Matrix is \textit{encrypted} by default*}
+    Matrix has encryption built-in. It is implemented using Olm, which is a
+    clone of the Signal protocol
+\end{frame}
+
+\begin{frame}{Matrix is \textit{decentralized}}
+    Anyone can host a \textit{homeserver}, and communicate with any other
+    homeserver in the federation.
+    \pause
+
+    Think of it like email. You can email somebody using Outlook from Gmail.
+    \pause
+
+    Every server in the federation gets a copy of a room, so no one entity
+    controls the network.\pause
+
+    This also means that the network is resilient to individual server outages,
+    or even wider internet outages.
+\end{frame}
+
+\begin{frame}{Matrix allows for \textit{bridges} and \textit{bots}}
+    Bridges bring external chat networks into Matrix. More on this later.
+    \pause
+
+    Bots allow for automated interactions and notifications.
+\end{frame}
+
+\section{How does it work?}
+
+\begin{frame}{Architecture}
+    % TODO
+    eventual consistency
+\end{frame}
+
+\begin{frame}{Client-Server API}
+
+\end{frame}
+
+\begin{frame}{Federation (Server-Server) API}
+
+\end{frame}
+
+\begin{frame}{A bit of graph theory}
+    DAG
+\end{frame}
+
+\begin{frame}{A bit of software engineering}
+    Git
+\end{frame}
+
+\begin{frame}{The event DAG}
+
+\end{frame}
+
+\begin{frame}{State events}
+
+\end{frame}
+
+\section{What does Beeper do?}
+
+% bridges
+% clients which are forks of element
+
+\section{Things that I'm excited about in Matrix}
+
+\begin{frame}
+  * Obviously excited about bridges
+  * Excited about possibilities with bots
+  * Excited about possibilities of building on top of Matrix. For example,
+    matrix notepad and matrix board
+  * Excited about spaces and the potential for better community management
 \end{frame}
 
 \end{document}
