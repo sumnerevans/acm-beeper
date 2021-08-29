@@ -102,6 +102,11 @@
         \item How many of you have taken Intro to Computer Science?
         \item How many of you are in the ACM Matrix chat?
     \end{itemize}
+    \pause[\thebeamerpauses]
+
+    I know you have all had a year of Zoom-class where asking questions is hard,
+    but now there are no excuses: interrupt me at any time if I use a term you
+    don't understand.
 \end{frame}
 
 \begin{frame}{Overview}
@@ -186,24 +191,30 @@
     Open protocols allow for \textit{open development} and  \textit{clean-room
     implementations}, they \textit{encourage competition}, and are
     \textit{externally auditable}.
-    \pause
 \end{frame}
 
 \begin{frame}{Matrix is \textit{encrypted} by default*}
     Matrix has encryption built-in. It is implemented using Olm, which is a
     clone of the Signal protocol
+
+    % TODO add more here
 \end{frame}
 
 \begin{frame}{Matrix is \textit{decentralized}}
-    Anyone can host a \textit{homeserver}, and communicate with any other
-    homeserver in the federation.
+    The Matrix architecture is actually a \textit{federated} architecture.
+
+    Individual devices communicate to a \textit{homeserver} which anyone can
+    host.
+
+    The homeserver communicates with other homeservers in the federation.
     \pause
 
-    Think of it like email. You can email somebody using Outlook from Gmail.
+    Think of it like email. You can email somebody using Outlook from Gmail.*
     \pause
 
     Every server in the federation gets a copy of a room, so no one entity
-    controls the network.\pause
+    controls the network.
+    \pause
 
     This also means that the network is resilient to individual server outages,
     or even wider internet outages.
@@ -219,6 +230,8 @@
 \section{How does it work?}
 
 \begin{frame}{Architecture}
+    The architecture of 
+
     % TODO
     eventual consistency
 \end{frame}
@@ -261,6 +274,10 @@
     matrix notepad and matrix board
   * Excited about spaces and the potential for better community management
 \end{frame}
+
+\section{How to get involved with Matrix}
+
+\section{A few general tips for everyone}
 
 \end{document}
 % Local Variables:
