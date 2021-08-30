@@ -166,7 +166,10 @@
     It is also designed in such a way that it makes it easy to break down walled
     garden communication platforms via \textbf{bridging}.
 
-    % TODO diagram of bridging
+    \centering
+    \visible<2>{\includegraphics[width=0.6\textwidth]{graphics/bridging.png}}
+    \tiny
+    \url{https://presents.half-shot.uk/slides/!mfikNYyXndTTDgQjAu:half-shot.uk/$F-4FHKkgjcLDJaKvw7C19NJ6BWkrk6n7GeIxK-TcxWg}
 \end{frame}
 
 \begin{frame}{A side note}
@@ -221,13 +224,76 @@
 \end{frame}
 
 \begin{frame}{Matrix allows for \textit{bridges} and \textit{bots}}
-    Bridges bring external chat networks into Matrix. More on this later.
+    Bridges bring external chat networks into Matrix. More on this in a moment.
     \pause
 
     Bots allow for automated interactions and notifications.
 \end{frame}
 
-\section{How does it work?}
+\section{What does Beeper do?}
+
+\begin{frame}{We want to break down chat network barriers}
+    \centering
+    \includegraphics[width=0.9\textwidth]{graphics/chat_systems.png}
+
+    \scriptsize
+    \textit{I'm one of the few Instagram users who connects solely through the
+    Unix 'talk' gateway.}\\
+    \tiny
+    \url{https://xkcd.com/1810/}
+\end{frame}
+
+\begin{frame}{We do that via bridging}
+    \centering
+    \includegraphics[width=0.88\textwidth]{graphics/matrix_bridging}
+
+    \tiny
+    \url{https://twitter.com/matrixdotorg/status/841424770025545730}
+\end{frame}
+
+\begin{frame}{How is this better than self-hosting?}
+    \textbf{Convenience!}
+    \pause
+
+    We do all of the heavy lifting and managing the bridges so you don't have
+    to.
+
+    You basically pay us to keep your bridges running and up-to-date.
+    \pause
+
+    We also maintain Synapse, so you don't have to.
+    \pause
+
+    And to top it all off, we have awesome clients!
+\end{frame}
+
+\begin{frame}{Beeper clients}
+    \Huge
+    \textbf{Demo}
+\end{frame}
+
+\begin{frame}{What do I do at Beeper?}
+    I work on the bridge team creating bridges to new networks and fixing issues
+    with existing bridges.
+
+    \begin{itemize}
+        \item I built the LinkedIn bridge.
+        \item I added a couple small features to the Slack bridge.
+        \item I am currently working on improving the reliability of the Signal
+            bridge.
+    \end{itemize}
+    \pause
+
+    I also like writing bots.
+
+    \begin{itemize}
+        \item I wrote a standup bot for our asynchronous standup posts.
+        \item I'm currently writing a Chatwoot bot for helping our support team
+            manage support requests.
+    \end{itemize}
+\end{frame}
+
+\section{How does Matrix it work?}
 
 \begin{frame}{Architecture}
     Every server has a copy of the room, but how do we keep that in sync?
@@ -325,11 +391,6 @@
         See \url{https://matrix.org/docs/spec/\#room-structure}
     }
 \end{frame}
-
-\section{What does Beeper do?}
-
-% bridges
-% clients which are forks of element
 
 \section{Things that I'm excited about in Matrix}
 
