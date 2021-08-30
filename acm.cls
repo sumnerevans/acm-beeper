@@ -18,7 +18,7 @@
 \RequirePackage{hyperref}
 
 \renewcommand*\footnoterule{}
-\setminted{autogobble,python3,mathescape}
+\setminted{autogobble,python3,mathescape,breaklines}
 %\usemintedstyle{emacs}
 
 \beamertemplatenavigationsymbolsempty%

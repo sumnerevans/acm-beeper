@@ -230,22 +230,58 @@
 \section{How does it work?}
 
 \begin{frame}{Architecture}
-    The architecture of 
+    Every server has a copy of the room, but how do we keep that in sync?
+    \pause
 
-    % TODO
-    eventual consistency
+    The architecture of Matrix does this in a way that ensures \textit{eventual
+    consistency}.
+    \pause
+
+    Even if the server where the room was created goes down, people can still
+    communicate.
+
+    When a broken server comes back online, it will receive all the
+    \textit{events} (messages).
+    \pause
+
+    Let's look at the animation on Matrix.org\ldots
 \end{frame}
 
-\begin{frame}{Client-Server API}
+\begin{frame}[fragile]{Client-Server API}
+    The \textbf{Client-Server API} specifies how clients communicate with their
+    homeserver.
+    \pause
+    \vspace{1in}
 
+    \Huge
+    \textbf{Demo!}
 \end{frame}
 
 \begin{frame}{Federation (Server-Server) API}
-
+    The \textbf{Server-Server API} or \textbf{Federation API} specifies how
+    servers communicate with other servers to ensure that everyone has the same
+    room state.
 \end{frame}
 
 \begin{frame}{A bit of graph theory}
-    DAG
+    \begin{columns}
+    \begin{column}{0.6\textwidth}
+        \begin{itemize}[<+->]
+            \item A \textbf{graph} is a collection of \textit{nodes} connected by
+                \textit{edges}.
+            \item A \textbf{directed graph} is a graph where the edges are
+                \textit{directional} (have arrows).
+            \item An \textbf{acyclic graph} is a graph that has no cycles/loops.
+            \item A \textbf{directed acyclic graph (DAG)} is a directional graph
+                with no cycles.
+        \end{itemize}
+    \end{column}%%
+    \begin{column}{0.4\textwidth} %%
+        \only<4>{
+            \includegraphics[width=\textwidth]{graphics/dag}
+        }
+    \end{column}
+    \end{columns}
 \end{frame}
 
 \begin{frame}{A bit of software engineering}
