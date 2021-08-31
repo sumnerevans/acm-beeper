@@ -157,7 +157,19 @@
     apps on your phone.
 \end{frame}
 
-\section{What does Matrix provide?}
+\begin{frame}{Imagine if\ldots}
+    you could start a chat with anyone in the world, on any chat platform just
+    by searching their name?
+    \pause
+
+    And further imagine that the chat was totally secure.
+    \pause
+
+    And further imagine that you could choose what chat client you wanted to
+    use.
+\end{frame}
+
+\section{Introducing Matrix}
 
 \begin{frame}{Matrix solves all your problems}
     Matrix is an \textbf{open} specification for \textbf{encrypted},
@@ -197,10 +209,24 @@
 \end{frame}
 
 \begin{frame}{Matrix is \textit{encrypted} by default*}
-    Matrix has encryption built-in. It is implemented using Olm, which is a
-    clone of the Signal protocol
+    Matrix has encryption built-in.
 
-    % TODO add more here
+    The core of the encryption is \textbf{Olm}, which is a clone of the Signal
+    double-ratchet protocol.
+    \begin{itemize}
+        \item If a single key is compromised, the attacker cannot see past
+            messages. This is called \textbf{forward secrecy}.
+        \item Key exchanges happen often, and if an attacker misses a single key
+            exchange, they are once again locked out. This is called
+            \textbf{break-in recovery}.
+    \end{itemize}
+    \pause
+
+    You end up with 1:1 Olm ratchets between all participants in the room.
+    \pause
+
+    Those ratchets are used to share the key data for the group ratchet (called
+    Megolm) which is used to encrypt messages.
 \end{frame}
 
 \begin{frame}{Matrix is \textit{decentralized}}
@@ -447,7 +473,20 @@
 
 \section{How to get involved with Matrix}
 
-\begin{frame}{Right here at Mines}
+\begin{frame}{Use it!}
+    \begin{itemize}[<+->]
+        \item Enable labs and show hidden events and try out the other upcoming
+            features.
+
+        \item You can run your own homeserver. Synapse is the most featureful
+            server, and is relatively easy to set up.
+
+            You can register a domain name for free for a year with the GitHub
+            Student Pack.
+    \end{itemize}
+\end{frame}
+
+\begin{frame}{Get involved right here at Mines}
     You can get involved in Matrix right here at ACM!
 
     \begin{itemize}
@@ -470,14 +509,6 @@
     \end{itemize}
 
     Most Matrix projects also have their own chat room.
-\end{frame}
-
-\begin{frame}{Run Synapse}
-    You can run your own homeserver. Synapse is the most featureful server, and
-    is relatively easy to set up.
-
-    You can register a domain name for free for a year with the GitHub Student
-    Pack.
 \end{frame}
 
 \begin{frame}{Contribute documentation or code}
@@ -525,6 +556,11 @@
 
     Anyone can contribute to open source, you just have to have realistic
     expectations about what that means.
+\end{frame}
+
+\begin{frame}[standout]
+    \Huge
+    Questions?
 \end{frame}
 
 \end{document}

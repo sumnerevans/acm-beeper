@@ -1,3 +1,4 @@
+.direnv/
 .vim
 demos/access-token
 
